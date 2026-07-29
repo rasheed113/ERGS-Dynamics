@@ -1,0 +1,204 @@
+/*
+ERGS Dynamics Website
+Layout System
+
+Purpose:
+Define the overall page structure and shared layout.
+*/
+
+
+body {
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+
+header {
+    width: 100%;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    padding: 1.1rem 0;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: auto;
+}
+
+.menu-toggle {
+    margin-left: auto;
+}
+
+
+main {
+    min-height: 100vh;
+}
+
+
+section {
+    padding: calc(var(--spacing-xl) * 0.7) 0;
+}
+
+
+footer {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+
+/*
+Hero Refinement
+Premium Technology Landing Experience
+*/
+
+.hero {
+    min-height: 56vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+.hero-content {
+    width: min(90%, 900px);
+}
+
+
+/*
+Hero Breathing Animation
+Premium Technology Landing Experience
+*/
+
+.hero-content {
+    animation: heroBreathing 9s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes heroBreathing {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-6px) scale(1.015);
+    }
+}
+
+
+/*
+Homepage Foundation Section
+Desktop spacing refinement
+*/
+.home-foundation {
+    padding-top: 1rem;
+}
+
+/*
+Homepage Hero Typography Refinement
+Desktop polish
+*/
+.hero-content h1 {
+    max-width: 800px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.15;
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+/*
+Homepage Section Rhythm
+Desktop spacing refinement
+*/
+main > section.container {
+    margin-top: 2rem;
+}
+
+main > section.container:first-of-type {
+    margin-top: 0;
+}
+
+.home-foundation {
+    margin-bottom: 3rem;
+}
+
+/*
+Desktop Polish Phase 1
+Improved spacing and readability
+*/
+@media (min-width: 1024px) {
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .hero-content {
+        max-width: 760px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.15rem;
+    }
+
+    main > section.container {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .card-grid {
+        gap: 2.5rem;
+    }
+
+    .home-foundation .glass-card {
+        padding: 3rem;
+    }
+}
+
+/*
+Desktop Hero Gap Fix
+Reduce excessive space below hero
+*/
+@media (min-width: 1024px) {
+
+    .hero {
+        padding-bottom: 1.5rem;
+    }
+
+    .hero + section {
+        padding-top: 1.5rem;
+    }
+}

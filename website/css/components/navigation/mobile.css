@@ -1,0 +1,174 @@
+/*
+ERGS Dynamics Website
+Mobile Navigation Component
+
+Purpose:
+Production mobile drawer navigation.
+*/
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    background: var(--glass-background);
+    cursor: pointer;
+}
+
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--color-text-primary);
+    transition:
+        transform var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+}
+
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+.mobile-menu {
+    display: none;
+}
+
+
+.menu-overlay {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(85%, 360px);
+        height: 100vh;
+        overflow-y: auto;
+        display: block;
+        padding: 6rem 2rem;
+        background: var(--color-surface);
+        backdrop-filter: var(--glass-blur);
+        transition: right 0.35s ease;
+        z-index: 1001;
+    }
+
+    .mobile-menu.active {
+        right: 0;
+    }
+
+    .mobile-menu > ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        list-style: none;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.65);
+        z-index: 1000;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+}
+
+/*
+Mobile Dropdown Navigation
+Purpose:
+Accordion navigation inside the mobile drawer.
+*/
+
+.mobile-dropdown-toggle {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    padding: 0.85rem 0;
+
+    border: none;
+    background: transparent;
+
+    color: var(--color-text-primary);
+    font: inherit;
+    cursor: pointer;
+}
+
+.mobile-dropdown-toggle .dropdown-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.mobile-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    display: none;
+    list-style: none;
+    padding-left: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.mobile-dropdown.open .mobile-dropdown-menu {
+    display: block;
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 0.55rem 0;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.mobile-dropdown-menu a:hover {
+    color: var(--color-accent);
+}

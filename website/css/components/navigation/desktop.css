@@ -1,0 +1,45 @@
+/*
+=================================================
+ERGS Dynamics
+Desktop Navigation V2
+=================================================
+*/
+
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: auto;
+    list-style: none;
+}
+
+.desktop-menu > li {
+    position: relative;
+}
+
+.desktop-menu a,
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    padding: 0.9rem 0;
+
+    border: none;
+    background: transparent;
+
+    color: var(--color-text-primary);
+    font: inherit;
+    font-weight: 500;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.desktop-menu a:hover,
+.nav-dropdown-toggle:hover {
+    color: var(--color-accent);
+}

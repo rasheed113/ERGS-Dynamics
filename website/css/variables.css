@@ -1,0 +1,67 @@
+:root {
+
+    /*
+    ERGS Dynamics Brand Colours
+    */
+
+    --color-background: #050816;
+    --color-surface: #0b1224;
+
+    --color-primary: #2563eb;
+    --color-accent: #00e5ff;
+
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a7b4c8;
+
+
+    /*
+    Glass System
+    */
+
+    --glass-background: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(15px);
+
+
+    /*
+    Typography
+    */
+
+    --font-main: "Inter", sans-serif;
+
+
+    /*
+    Spacing System
+    */
+
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+
+    /*
+    Border System
+    */
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+
+    /*
+    Shadow System
+    */
+
+    --shadow-glow: 0 0 25px rgba(0, 229, 255, 0.25);
+
+
+    /*
+    Animation System
+    */
+
+    --transition-fast: 200ms ease;
+    --transition-normal: 400ms ease;
+
+}
