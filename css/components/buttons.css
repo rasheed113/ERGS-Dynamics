@@ -1,0 +1,31 @@
+/*
+Premium Button Component
+*/
+
+.button-primary,
+a.button-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.9rem 1.6rem;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        rgba(37,99,235,1),
+        rgba(0,229,255,0.95)
+    );
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+.button-primary:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05);
+    box-shadow:
+        0 0 18px rgba(0,229,255,0.25),
+        0 0 40px rgba(37,99,235,0.18);
+}

@@ -14,7 +14,16 @@ function initialiseApplication() {
 
     initialiseNavigation();
     initialiseAnimations();
+    initialiseEffects();
 
     console.log("ERGS Dynamics Website Initialised");
 
 }
+
+
+/*
+Global effects moved to js/effects.js
+*/
+
+
+

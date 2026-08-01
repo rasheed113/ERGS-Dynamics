@@ -10,12 +10,20 @@
 
     <title>Project Rules | ERGS Dynamics</title>
 
+        <link rel="stylesheet" href="../css/components/buttons.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
 <link rel="stylesheet" href="../css/components/document-navigation.css">
     <link rel="stylesheet" href="../css/components/mobile-menu.css">
+    <link rel="stylesheet" href="../css/components/click-effect.css">
+    <link rel="stylesheet" href="../css/components/back-to-top.css">
+    <link rel="stylesheet" href="../css/components/documentation.css">
+
+    <link rel="stylesheet" href="../css/components/document-content.css">
+
+
     <link rel="stylesheet" href="../css/components/navigation.css">
     <link rel="stylesheet" href="../css/components/navigation/desktop.css">
     <link rel="stylesheet" href="../css/components/navigation/mobile.css">
@@ -32,14 +40,6 @@
             ERGS Dynamics
         </div>
 
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
         <ul class="desktop-menu">
             <li><a href="../index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -48,26 +48,28 @@
             <li><a href="about.html">About</a></li>
         </ul>
 
-        <div class="mobile-menu">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-
+        <div id="global-navigation"></div>
     </nav>
 
-    <div class="menu-overlay"></div>
+    
 
 </header>
 
 
 
-<main>
+<main class="document-content"
+data-title="Project Rules"
+data-category="Engineering Foundation"
+data-version="Version 1.0"
+data-status="Stable"
+data-reading-time="6 min read">
+
+<div id="back-navigation-container"></div>
+
+<div id="document-header-container"></div>
+
+
+
 
 <section>
 <h1>Project Rules</h1>
@@ -84,7 +86,7 @@ Engineering standards, project governance, documentation rules, and development 
 <p>
 Core project standards, engineering discipline, backup policies, and development guidelines.
 </p>
-<p><a class="button-primary" href="../PROJECT_RULES.md">Open Documentation</a></p>
+<p><a class="button-primary" href="document-viewer.html?doc=PROJECT_RULES">Open Documentation</a></p>
 </article>
 
 <article class="glass-card">
@@ -92,7 +94,7 @@ Core project standards, engineering discipline, backup policies, and development
 <p>
 System structure, modular design, technical decisions, and architecture principles.
 </p>
-<p><a class="button-primary" href="../ARCHITECTURE.md">Open Documentation</a></p>
+<p><a class="button-primary" href="document-viewer.html?doc=ARCHITECTURE">Open Documentation</a></p>
 </article>
 
 <article class="glass-card">
@@ -100,7 +102,7 @@ System structure, modular design, technical decisions, and architecture principl
 <p>
 Implementation process, coding practices, testing approach, and engineering workflow.
 </p>
-<p><a class="button-primary" href="../DEVELOPMENT_WORKFLOW.md">Open Documentation</a></p>
+<p><a class="button-primary" href="document-viewer.html?doc=DEVELOPMENT_WORKFLOW">Open Documentation</a></p>
 </article>
 
 <article class="glass-card">
@@ -108,7 +110,7 @@ Implementation process, coding practices, testing approach, and engineering work
 <p>
 Visual systems, UI principles, reusable components, and design guidelines.
 </p>
-<p><a class="button-primary" href="../DESIGN_SYSTEM.md">Open Documentation</a></p>
+<p><a class="button-primary" href="document-viewer.html?doc=DESIGN_SYSTEM">Open Documentation</a></p>
 </article>
 
 <div class="doc-navigation">
@@ -171,8 +173,26 @@ Visual systems, UI principles, reusable components, and design guidelines.
 
 
 
+
+    
+
+
+
+
+
+
+
 <script src="../js/navigation.js"></script>
+<script src="../js/animations.js"></script>
+<script src="../js/effects.js"></script>
+<script src="../js/navigation-loader.js"></script>
 <script src="../js/main.js"></script>
+
+<script src="../js/back-navigation.js"></script>
+<script src="../js/back-navigation-loader.js"></script>
+
+<script src="../js/document-header-loader.js"></script>
+
 
 </body>
 

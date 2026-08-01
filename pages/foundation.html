@@ -10,12 +10,20 @@
 
     <title>Engineering Foundation | ERGS Dynamics</title>
 
+        <link rel="stylesheet" href="../css/components/buttons.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
 <link rel="stylesheet" href="../css/components/document-navigation.css">
     <link rel="stylesheet" href="../css/components/mobile-menu.css">
+    <link rel="stylesheet" href="../css/components/click-effect.css">
+    <link rel="stylesheet" href="../css/components/back-to-top.css">
+    <link rel="stylesheet" href="../css/components/documentation.css">
+
+    <link rel="stylesheet" href="../css/components/document-content.css">
+
+
     <link rel="stylesheet" href="../css/components/navigation.css">
     <link rel="stylesheet" href="../css/components/navigation/desktop.css">
     <link rel="stylesheet" href="../css/components/navigation/mobile.css">
@@ -32,14 +40,6 @@
             ERGS Dynamics
         </div>
 
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
         <ul class="desktop-menu">
             <li><a href="../index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -48,50 +48,27 @@
             <li><a href="about.html">About</a></li>
         </ul>
 
-        <div class="mobile-menu">
-<ul>
-<li><a href="../index.html">Home</a></li>
-
-
-<li class="mobile-dropdown">
-<button class="mobile-dropdown-toggle">
-Services
-<span class="dropdown-arrow">▾</span>
-</button>
-<ul class="mobile-dropdown-menu">
-<li><a href="services.html">All Services</a></li>
-<li><a href="services.html#software">Software Engineering</a></li>
-<li><a href="services.html#ai">AI &amp; Automation</a></li>
-<li><a href="services.html#web">Web Platforms</a></li>
-</ul>
-</li>
-
-<li class="mobile-dropdown">
-<button class="mobile-dropdown-toggle">
-Products
-<span class="dropdown-arrow">▾</span>
-</button>
-<ul class="mobile-dropdown-menu">
-<li><a href="products.html">All Products</a></li>
-<li><a href="work-disk.html">Work_Disk</a></li>
-<li><a href="trading-bot.html">Trading Bot</a></li>
-<li><a href="future-products.html">Future Products</a></li>
-</ul>
-</li>
-
-<li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-</ul>
-</div>
-
+        <div id="global-navigation"></div>
     </nav>
 
-    <div class="menu-overlay"></div>
+    
 
 </header>
 
 
-<main>
+<main class="document-content"
+data-title="Engineering Foundation"
+data-category="Engineering Foundation"
+data-version="Version 1.0"
+data-status="Stable"
+data-reading-time="7 min read">
+
+<div id="back-navigation-container"></div>
+
+<div id="document-header-container"></div>
+
+
+
 
 <section>
 
@@ -123,7 +100,7 @@ Products
             System architecture, engineering decisions, and technical blueprints.
         </p>
 
-        <p><a class="button-primary" href="../ARCHITECTURE.md">Open Documentation</a></p>
+        <p><a class="button-primary" href="document-viewer.html?doc=ARCHITECTURE">Open Documentation</a></p>
     </article>
 
 
@@ -137,7 +114,7 @@ Products
             Engineering practices, development workflow, and implementation standards.
         </p>
 
-        <p><a class="button-primary" href="../DEVELOPMENT_WORKFLOW.md">Open Documentation</a></p>
+        <p><a class="button-primary" href="document-viewer.html?doc=DEVELOPMENT_WORKFLOW">Open Documentation</a></p>
     </article>
 
 
@@ -151,7 +128,7 @@ Products
             Research, experiments, and future technology exploration.
         </p>
 
-        <p><a class="button-primary" href="../README.md">Open Documentation</a></p>
+        <p><a class="button-primary" href="document-viewer.html?doc=README">Open Documentation</a></p>
     </article>
 
 
@@ -165,7 +142,7 @@ Products
             Project governance, standards, policies, and long-term technical direction.
         </p>
 
-        <p><a class="button-primary" href="../PROJECT_RULES.md">Open Documentation</a></p>
+        <p><a class="button-primary" href="document-viewer.html?doc=PROJECT_RULES">Open Documentation</a></p>
     </article>
 
 
@@ -231,8 +208,26 @@ Products
 
 
 
+
+    
+
+
+
+
+
+
+
 <script src="../js/navigation.js"></script>
+<script src="../js/animations.js"></script>
+<script src="../js/effects.js"></script>
+<script src="../js/navigation-loader.js"></script>
 <script src="../js/main.js"></script>
+
+<script src="../js/back-navigation.js"></script>
+<script src="../js/back-navigation-loader.js"></script>
+
+<script src="../js/document-header-loader.js"></script>
+
 
 </body>
 

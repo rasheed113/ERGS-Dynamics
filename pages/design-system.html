@@ -10,12 +10,20 @@
 
     <title>Design System | ERGS Dynamics</title>
 
+        <link rel="stylesheet" href="../css/components/buttons.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
 <link rel="stylesheet" href="../css/components/document-navigation.css">
     <link rel="stylesheet" href="../css/components/mobile-menu.css">
+    <link rel="stylesheet" href="../css/components/click-effect.css">
+    <link rel="stylesheet" href="../css/components/back-to-top.css">
+    <link rel="stylesheet" href="../css/components/documentation.css">
+
+    <link rel="stylesheet" href="../css/components/document-content.css">
+
+
     <link rel="stylesheet" href="../css/components/navigation.css">
     <link rel="stylesheet" href="../css/components/navigation/desktop.css">
     <link rel="stylesheet" href="../css/components/navigation/mobile.css">
@@ -32,14 +40,6 @@
             ERGS Dynamics
         </div>
 
-        <button class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
         <ul class="desktop-menu">
             <li><a href="../index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -48,25 +48,27 @@
             <li><a href="about.html">About</a></li>
         </ul>
 
-        <div class="mobile-menu">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-
+        <div id="global-navigation"></div>
     </nav>
 
-    <div class="menu-overlay"></div>
+    
 
 </header>
 
 
-<main>
+<main class="document-content"
+data-title="Design System"
+data-category="Engineering Foundation"
+data-version="Version 1.0"
+data-status="Stable"
+data-reading-time="8 min read">
+
+<div id="back-navigation-container"></div>
+
+<div id="document-header-container"></div>
+
+
+
 
 <section>
 
@@ -98,7 +100,7 @@
             Brand colours, typography, spacing system, and visual consistency standards across ERGS Dynamics products.
         </p>
 
-        <p><a class="button-primary" href="../DESIGN_SYSTEM.md">Open Documentation</a></p>
+        <p><a class="button-primary" href="document-viewer.html?doc=DESIGN_SYSTEM">Open Documentation</a></p>
     </article>
 
 
@@ -112,7 +114,7 @@
             Reusable UI components, interface patterns, navigation elements, and shared design building blocks.
         </p>
 
-        <p><a class="button-primary" href="../DESIGN_SYSTEM.md">Open Documentation</a></p>
+        <p><a class="button-primary" href="document-viewer.html?doc=DESIGN_SYSTEM">Open Documentation</a></p>
     </article>
 
 
@@ -126,7 +128,7 @@
             Animations, glow effects, glass surfaces, transitions, and interaction behaviour principles.
         </p>
 
-        <p><a class="button-primary" href="../DESIGN_SYSTEM.md">Open Documentation</a></p>
+        <p><a class="button-primary" href="document-viewer.html?doc=DESIGN_SYSTEM">Open Documentation</a></p>
     </article>
 
 
@@ -140,7 +142,7 @@
             Consistency, accessibility, hierarchy, scalability, and long-term interface quality.
         </p>
 
-        <p><a class="button-primary" href="../DESIGN_SYSTEM.md">Open Documentation</a></p>
+        <p><a class="button-primary" href="document-viewer.html?doc=DESIGN_SYSTEM">Open Documentation</a></p>
     </article>
 
 
@@ -206,8 +208,26 @@
 
 
 
+
+    
+
+
+
+
+
+
+
 <script src="../js/navigation.js"></script>
+<script src="../js/animations.js"></script>
+<script src="../js/effects.js"></script>
+<script src="../js/navigation-loader.js"></script>
 <script src="../js/main.js"></script>
+
+<script src="../js/back-navigation.js"></script>
+<script src="../js/back-navigation-loader.js"></script>
+
+<script src="../js/document-header-loader.js"></script>
+
 
 </body>
 

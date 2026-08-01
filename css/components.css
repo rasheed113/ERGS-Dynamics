@@ -149,65 +149,8 @@ Glass Card Component
 Premium Technology Surface
 */
 
-.glass-card {
-    background: var(--glass-background);
-    backdrop-filter: var(--glass-blur);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 18px;
-    padding: 1.5rem;
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.glass-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(0,229,255,0.35);
-    box-shadow:
-        0 0 25px rgba(0,229,255,0.18);
-}
-
-.glass-card h3 {
-    margin-bottom: 0.75rem;
-}
-
-.glass-card p {
-    color: var(--color-text-secondary);
-}
 
 
-/*
-Premium Button Component
-*/
-
-.button-primary,
-a.button-primary {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.9rem 1.6rem;
-    border-radius: 12px;
-    background: linear-gradient(
-        135deg,
-        rgba(37,99,235,1),
-        rgba(0,229,255,0.95)
-    );
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        filter 0.3s ease;
-}
-
-.button-primary:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.05);
-    box-shadow:
-        0 0 18px rgba(0,229,255,0.25),
-        0 0 40px rgba(37,99,235,0.18);
-}
 
 /*
 Premium Navigation Interaction
@@ -249,35 +192,6 @@ Premium Navigation Interaction
 Premium Glass Card Enhancement
 */
 
-.glass-card {
-    overflow: hidden;
-    position: relative;
-}
-
-.glass-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(0,229,255,0.08),
-        transparent 45%
-    );
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    pointer-events: none;
-}
-
-.glass-card:hover::before {
-    opacity: 1;
-}
-
-.glass-card:hover {
-    transform: translateY(-8px) scale(1.01);
-    border-color: rgba(0,229,255,0.45);
-    box-shadow:
-        0 15px 40px rgba(0,229,255,0.18),
-        0 0 25px rgba(0,229,255,0.12);
 }
 
 
@@ -309,52 +223,6 @@ section:hover::after {
 }
 
 
-/*
-Hero Ambient Glow
-Premium Technology Atmosphere
-*/
-
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 700px;
-    height: 700px;
-    left: 50%;
-    top: -250px;
-    transform: translateX(-50%);
-    background: radial-gradient(
-        circle,
-        rgba(0,229,255,0.12) 0%,
-        rgba(37,99,235,0.08) 35%,
-        transparent 70%
-    );
-    filter: blur(40px);
-    animation: heroAura 12s ease-in-out infinite;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-@keyframes heroAura {
-    0%,100% {
-        transform: translateX(-50%) scale(1);
-        opacity: 0.65;
-    }
-
-    50% {
-        transform: translateX(-50%) scale(1.08);
-        opacity: 1;
-    }
-}
 
 
 /* Documentation Navigation */
@@ -482,12 +350,6 @@ Premium Technology Atmosphere
 Homepage Card Grid
 Reusable responsive grid
 */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
 
 .section-title {
     text-align: center;
@@ -498,27 +360,6 @@ Reusable responsive grid
 Homepage Cards
 Desktop polish
 */
-.card-grid .glass-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 240px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-grid .glass-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-glow);
-}
-
-.card-grid .glass-card h3 {
-    margin-bottom: 1rem;
-}
-
-.card-grid .glass-card p:last-child {
-    margin-top: auto;
-}
 
 /*
 Homepage Section Headings
@@ -545,10 +386,6 @@ Professional hierarchy
 Homepage Desktop Layout
 Improved content width
 */
-.card-grid {
-    max-width: 1200px;
-    margin: 2rem auto 0;
-}
 
 .container {
     max-width: 1200px;
@@ -567,49 +404,6 @@ Reusable descriptive text
     line-height: 1.8;
 }
 
-/*
-Professional Footer
-Homepage desktop refinement
-*/
-footer {
-    border-top: 1px solid rgba(255,255,255,0.08);
-    margin-top: 4rem;
-    padding: 3rem 0 2rem;
-}
-
-footer .card-grid {
-    align-items: start;
-    gap: 3rem;
-}
-
-footer h3 {
-    margin-bottom: 1rem;
-    color: var(--color-text-primary);
-}
-
-footer p {
-    margin-bottom: 0.75rem;
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-}
-
-footer a {
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: color 0.25s ease;
-}
-
-footer a:hover {
-    color: var(--color-accent);
-}
-
-footer > p:last-child {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    text-align: center;
-    color: var(--color-text-secondary);
-}
 
 /*
 Documentation Reading Experience
@@ -783,3 +577,22 @@ Premium technology atmosphere
         animation-duration: 10s;
     }
 }
+
+
+
+/*
+=================================================
+ERGS Dynamics
+DOCUMENT CARD READING SIZE FIX
+=================================================
+*/
+
+main.document-content .glass-card p {
+    font-size: 20px !important;
+    line-height: 1.9 !important;
+}
+
+main.document-content .glass-card h3 {
+    font-size: 28px !important;
+}
+
