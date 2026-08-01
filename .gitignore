@@ -2,3 +2,7 @@
 *_before_*
 archive/
 *.zip
+
+# Python cache
+__pycache__/
+*.pyc
