@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "about": "Über uns",
+        "products": "Produkte",
+        "services": "Dienstleistungen",
+        "contact": "Kontakt"
+    },
+    "buttons": {
+        "read_more": "Mehr lesen",
+        "learn_more": "Mehr erfahren",
+        "download": "Herunterladen",
+        "submit": "Senden"
+    },
+    "hero": {
+        "title": "Technologie-Stiftung",
+        "subtitle": "Die Zukunft durch Innovation entwickeln"
+    },
+    "messages": {
+        "loading": "Wird geladen...",
+        "success": "Vorgang erfolgreich abgeschlossen",
+        "error": "Etwas ist schiefgelaufen"
+    },
+    "system": {
+        "language": "Sprache",
+        "theme": "Thema",
+        "settings": "Einstellungen"
+    }
+}

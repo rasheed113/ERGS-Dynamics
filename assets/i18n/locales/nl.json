@@ -1,0 +1,71 @@
+{
+  "baq": "Baskisch",
+  "bas": "Basaa",
+  "bax": "Bamum",
+  "be": "Wit-Russisch",
+  "bem": "Bemba",
+  "bg": "Bulgaars",
+  "bho": "Bhojpuri",
+  "bi": "Bislama",
+  "bjn": "Banjaars",
+  "blt": "Tai Dam",
+  "bm": "Bambara",
+  "bn": "Bengaals",
+  "bo": "Tibetaans",
+  "bpy": "Bishnupriya",
+  "br": "Bretons",
+  "brx": "Bodo",
+  "bs": "Bosnisch",
+  "bua": "Buriatisch",
+  "bug": "Boeginees",
+  "ca": "Catalaans",
+  "ceb": "Cebuano",
+  "cgg": "Chiga",
+  "ch": "Chamorro",
+  "chr": "Cherokee",
+  "ckb": "Centraal-Koerdisch",
+  "nav.home": "Home",
+  "nav.about": "Over ons",
+  "nav.products": "Producten",
+  "nav.services": "Diensten",
+  "nav.contact": "Contact",
+  "buttons.read_more": "Lees meer",
+  "buttons.learn_more": "Meer informatie",
+  "buttons.download": "Downloaden",
+  "buttons.submit": "Verzenden",
+  "hero.title": "Hero-titel",
+  "hero.subtitle": "Hero-ondertitel",
+  "messages.loading": "Laden...",
+  "messages.success": "Succes",
+  "messages.error": "Fout",
+  "system.language": "Taal",
+  "system.theme": "Thema",
+  "system.settings": "Instellingen",
+  "nav": {
+    "home": "Home",
+    "about": "Over ons",
+    "products": "Producten",
+    "services": "Diensten",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "read_more": "Lees meer",
+    "learn_more": "Meer informatie",
+    "download": "Downloaden",
+    "submit": "Verzenden"
+  },
+  "hero": {
+    "title": "Hoofdtitel",
+    "subtitle": "Ondertitel"
+  },
+  "messages": {
+    "loading": "Laden",
+    "success": "Succes",
+    "error": "Fout"
+  },
+  "system": {
+    "language": "Taal",
+    "theme": "Thema",
+    "settings": "Instellingen"
+  }
+}

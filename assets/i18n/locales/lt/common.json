@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "services": "Services",
+    "contact": "Contact"
+  },
+
+  "buttons": {
+    "read_more": "Read More",
+    "learn_more": "Learn More",
+    "download": "Download",
+    "submit": "Submit"
+  },
+
+  "hero": {
+    "title": "Technology Foundation",
+    "subtitle": "Engineering the Future with Innovation"
+  },
+
+  "messages": {
+    "loading": "Loading...",
+    "success": "Operation completed successfully",
+    "error": "Something went wrong"
+  },
+
+  "system": {
+    "language": "Language",
+    "theme": "Theme",
+    "settings": "Settings"
+  }
+}

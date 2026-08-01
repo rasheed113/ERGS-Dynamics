@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "home": "خانه",
+        "about": "درباره ما",
+        "products": "محصولات",
+        "services": "خدمات",
+        "contact": "تماس"
+    },
+    "buttons": {
+        "read_more": "بیشتر بخوانید",
+        "learn_more": "بیشتر بیاموزید",
+        "download": "دانلود",
+        "submit": "ارسال"
+    },
+    "hero": {
+        "title": "بنیاد فناوری",
+        "subtitle": "مهندسی آینده با نوآوری"
+    },
+    "messages": {
+        "loading": "در حال بارگذاری...",
+        "success": "عملیات با موفقیت انجام شد",
+        "error": "مشکلی پیش آمده است"
+    },
+    "system": {
+        "language": "زبان",
+        "theme": "پوسته",
+        "settings": "تنظیمات"
+    }
+}

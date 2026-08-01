@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Over ons",
+    "products": "Producten",
+    "services": "Diensten",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "read_more": "Lees meer",
+    "learn_more": "Meer informatie",
+    "download": "Downloaden",
+    "submit": "Verzenden"
+  },
+  "hero": {
+    "title": "Titel",
+    "subtitle": "Ondertitel"
+  },
+  "messages": {
+    "loading": "Laden...",
+    "success": "Succes",
+    "error": "Fout"
+  },
+  "system": {
+    "language": "Taal",
+    "theme": "Thema",
+    "settings": "Instellingen"
+  }
+}

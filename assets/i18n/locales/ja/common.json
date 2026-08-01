@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "home": "ホーム",
+        "about": "私たちについて",
+        "products": "製品",
+        "services": "サービス",
+        "contact": "お問い合わせ"
+    },
+    "buttons": {
+        "read_more": "続きを読む",
+        "learn_more": "詳しく見る",
+        "download": "ダウンロード",
+        "submit": "送信"
+    },
+    "hero": {
+        "title": "テクノロジー財団",
+        "subtitle": "イノベーションで未来を創造する"
+    },
+    "messages": {
+        "loading": "読み込み中...",
+        "success": "操作が正常に完了しました",
+        "error": "問題が発生しました"
+    },
+    "system": {
+        "language": "言語",
+        "theme": "テーマ",
+        "settings": "設定"
+    }
+}

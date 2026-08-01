@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "home": "Ana Sayfa",
+        "about": "Hakkımızda",
+        "products": "Ürünler",
+        "services": "Hizmetler",
+        "contact": "İletişim"
+    },
+    "buttons": {
+        "read_more": "Daha Fazla Oku",
+        "learn_more": "Daha Fazla Öğren",
+        "download": "İndir",
+        "submit": "Gönder"
+    },
+    "hero": {
+        "title": "Teknoloji Vakfı",
+        "subtitle": "Yeniliklerle Geleceği Mühendislik Etmek"
+    },
+    "messages": {
+        "loading": "Yükleniyor...",
+        "success": "İşlem başarıyla tamamlandı",
+        "error": "Bir şeyler yanlış gitti"
+    },
+    "system": {
+        "language": "Dil",
+        "theme": "Tema",
+        "settings": "Ayarlar"
+    }
+}

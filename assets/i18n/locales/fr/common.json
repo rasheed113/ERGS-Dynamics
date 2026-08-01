@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "about": "À propos de nous",
+        "products": "Produits",
+        "services": "Prestations",
+        "contact": "Nous contacter"
+    },
+    "buttons": {
+        "read_more": "Lire plus",
+        "learn_more": "En savoir plus",
+        "download": "Télécharger",
+        "submit": "Envoyer"
+    },
+    "hero": {
+        "title": "Fondation Technologique",
+        "subtitle": "Construire l'avenir grâce à l'innovation"
+    },
+    "messages": {
+        "loading": "Chargement...",
+        "success": "Opération terminée avec succès",
+        "error": "Une erreur s'est produite"
+    },
+    "system": {
+        "language": "Langue",
+        "theme": "Thème",
+        "settings": "Paramètres"
+    }
+}
