@@ -34,6 +34,9 @@ Dropdown Panel
 
 .dropdown-menu {
 
+    display: flex;
+    flex-direction: column;
+
     position: absolute;
 
     top: calc(100% + 14px);
@@ -101,6 +104,7 @@ Dropdown Items
 .dropdown-menu li {
 
     width:100%;
+    display:block;
 
 }
 
