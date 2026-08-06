@@ -15,7 +15,7 @@ async function loadGlobalNavigation() {
 
     try {
 
-        const navigationPath = "/components/navigation.html";
+        const navigationPath = "./components/navigation.html";
 
         const response = await fetch(navigationPath);
 
