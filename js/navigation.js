@@ -140,4 +140,25 @@ function initialiseNavigation() {
 
     });
 
+
+    /*
+    Dynamic Navigation Paths
+    */
+
+    const navigationLinks =
+        document.querySelectorAll("[data-path]");
+
+    navigationLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            const path = link.dataset.path;
+
+            window.location.href = resolvePath(path);
+
+        });
+
+    });
+
+
 }
