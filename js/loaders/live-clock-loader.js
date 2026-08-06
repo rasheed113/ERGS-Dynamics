@@ -13,7 +13,7 @@ async function loadLiveClock() {
 
     try {
 
-        const response = await fetch("/components/live-clock/live-clock.html");
+        const response = await fetch("./components/live-clock/live-clock.html");
 
         const html = await response.text();
 
