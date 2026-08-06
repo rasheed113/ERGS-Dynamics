@@ -18,7 +18,7 @@ async function loadBackNavigation() {
 
     try {
 
-        const response = await fetch("/components/back-navigation.html");
+        const response = await fetch("components/back-navigation.html");
 
         if (!response.ok) {
             throw new Error("Unable to load back navigation component.");
