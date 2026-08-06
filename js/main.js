@@ -29,6 +29,7 @@ async function initialiseApplication() {
     initialiseEffects();
     loadLiveClock();
 
+    console.log("ERGS Dynamics Website Initialised");
 
 }
 
