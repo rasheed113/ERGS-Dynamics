@@ -172,3 +172,55 @@ Accordion navigation inside the mobile drawer.
 .mobile-dropdown-menu a:hover {
     color: var(--color-accent);
 }
+
+/* ---------- Language Button Layout ---------- */
+
+
+.menu-toggle{
+    flex-shrink:0;
+}
+
+/* ===== Mobile Header 3-Column Layout ===== */
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    flex:1;
+}
+
+
+.menu-toggle{
+    flex:0 0 auto;
+    margin-left:0;
+}
+
+@media (max-width:768px){
+
+    .menu-toggle {
+        position:absolute;
+        right:1rem;
+        top:1rem;
+        display:flex !important;
+        z-index:1100;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    #global-navigation .menu-toggle {
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        left: auto !important;
+        margin: 0 !important;
+        transform: none !important;
+        z-index: 9999 !important;
+    }
+
+}
+

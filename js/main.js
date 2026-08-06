@@ -1,3 +1,4 @@
+
 /*
 ERGS Dynamics Website
 Application Entry Point
@@ -7,14 +8,26 @@ Initialise the website and load application modules.
 */
 
 
+let applicationInitialised = false;
+
 document.addEventListener("DOMContentLoaded", initialiseApplication);
 
 
-function initialiseApplication() {
+async function initialiseApplication() {
+
+    if (applicationInitialised) {
+        return;
+    }
+
+    applicationInitialised = true;
+
+
+
 
     initialiseNavigation();
     initialiseAnimations();
     initialiseEffects();
+    loadLiveClock();
 
     console.log("ERGS Dynamics Website Initialised");
 

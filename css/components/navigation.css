@@ -1,0 +1,73 @@
+/*
+ERGS Dynamics
+Navigation Layout
+*/
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.desktop-menu {
+    flex: 1;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+    }
+}
+
+/* Navigation container alignment fix */
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Desktop navigation alignment */
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+/* Keep menu button on right */
+.menu-toggle {
+    margin-left: auto;
+}
+
+
+/* Navigation component container alignment */
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.navigation-container .desktop-menu {
+    flex: 1;
+    justify-content: center;
+}
+
+.navigation-container .menu-toggle {
+    margin-left: auto;
+}
+

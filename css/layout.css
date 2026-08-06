@@ -40,15 +40,9 @@ nav {
 }
 
 .desktop-menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
     margin-left: auto;
 }
 
-.menu-toggle {
-    margin-left: auto;
-}
 
 
 main {

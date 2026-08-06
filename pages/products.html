@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
 <link rel="stylesheet" href="../css/components/document-navigation.css">
-    <link rel="stylesheet" href="../css/components/mobile-menu.css">
     <link rel="stylesheet" href="../css/components/click-effect.css">
     <link rel="stylesheet" href="../css/components/back-to-top.css">
     <link rel="stylesheet" href="../css/components/documentation.css">
@@ -24,8 +23,9 @@
     <link rel="stylesheet" href="../css/components/document-content.css">
 
 
-    <link rel="stylesheet" href="../css/components/navigation.css">
+    <!-- navigation.css retired -->
     <link rel="stylesheet" href="../css/components/navigation/desktop.css">
+    <link rel="stylesheet" href="../css/components/navigation/header-layout.css">
     <link rel="stylesheet" href="../css/components/navigation/mobile.css">
     <link rel="stylesheet" href="../css/components/navigation/dropdown.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -34,25 +34,7 @@
 <body>
 
 <header>
-    <nav>
-
-        <div class="logo">
-            ERGS Dynamics
-        </div>
-
-        <ul class="desktop-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-
-        <div id="global-navigation"></div>
-    </nav>
-
-    
-
+    <div id="global-navigation"></div>
 </header>
 
 
@@ -165,20 +147,20 @@ data-reading-time="5 min read">
 
         <div>
             <h3>Company</h3>
-            <p><a href="about.html">About</a></p>
-            <p><a href="foundation.html">Foundation</a></p>
-            <p><a href="contact.html">Contact</a></p>
+            <p><a href="about.html"><span>About</span></a></p>
+            <p><a href="foundation.html"><span>Foundation</span></a></p>
+            <p><a href="contact.html"><span>Contact</span></a></p>
         </div>
 
         <div>
-            <h3>Services</h3>
-            <p><a href="services.html">Software Engineering</a></p>
+            <h3><span>Services</span></h3>
+            <p><a href="services.html"><span>Software Engineering</span></a></p>
             <p><a href="services.html#ai">AI & Automation</a></p>
-            <p><a href="services.html#web">Web Platforms</a></p>
+            <p><a href="services.html#web"><span>Web Platforms</span></a></p>
         </div>
 
         <div>
-            <h3>Products</h3>
+            <h3><span>Products</span></h3>
             <p><a href="work-disk.html">Work_Disk</a></p>
             <p><a href="trading-bot.html">Trading Bot</a></p>
             <p><a href="future-products.html">Future Products</a></p>
@@ -209,12 +191,12 @@ data-reading-time="5 min read">
 
 
 
-<script src="../js/navigation.js"></script>
 <script src="../js/animations.js"></script>
 <script src="../js/effects.js"></script>
-<script src="../js/navigation-loader.js"></script>
 <script src="../js/main.js"></script>
 
+<script src="../js/loaders/navigation-loader.js"></script>
+<script src="../js/navigation.js"></script>
 <script src="../js/back-navigation.js"></script>
 <script src="../js/back-navigation-loader.js"></script>
 

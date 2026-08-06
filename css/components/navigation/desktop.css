@@ -9,7 +9,8 @@ Desktop Navigation V2
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-left: auto;
+    margin:0;
+    padding:0;
     list-style: none;
 }
 
@@ -43,3 +44,27 @@ Desktop Navigation V2
 .nav-dropdown-toggle:hover {
     color: var(--color-accent);
 }
+
+/* Language button header alignment fix */
+
+header nav {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1.5rem;
+}
+
+.logo {
+    flex:0 0 auto;
+    white-space:nowrap;
+}
+
+.desktop-menu {
+    flex:1;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+}
+
+
+

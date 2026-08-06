@@ -19,127 +19,19 @@
     <link rel="stylesheet" href="css/components/click-effect.css">
     <link rel="stylesheet" href="css/components/back-to-top.css">
     <link rel="stylesheet" href="css/components/footer.css">
-    <link rel="stylesheet" href="css/components/mobile-menu.css">
-    <link rel="stylesheet" href="css/components/navigation.css">
+    <!-- navigation.css retired -->
     <link rel="stylesheet" href="css/components/navigation/desktop.css">
+    <link rel="stylesheet" href="css/components/navigation/header-layout.css">
     <link rel="stylesheet" href="css/components/navigation/mobile.css">
     <link rel="stylesheet" href="css/components/navigation/dropdown.css">
+    <link rel="stylesheet" href="css/components/live-clock.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
 <header>
-    <div class="container">
-        <nav>
-
-            <div class="logo">
-                ERGS Dynamics
-            </div>
-
-            <ul class="desktop-menu">
-
-                <li><a href="index.html"> <span>Home</span> </a></li>
-                    <li><a href="pages/foundation.html"><span>Foundation</span></a></li>
-
-                
-
-                <li class="has-dropdown">
-                    <button class="nav-dropdown-toggle">
-                        <span>Services</span>
-                        <span class="dropdown-arrow">▾</span>
-                    </button>
-
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/services.html"><span>All Services</span></a></li>
-                        <li><a href="pages/services.html#software"><span>Software Engineering</span></a></li>
-                        <li><a href="pages/services.html#ai"><span>AI &amp; Automation</span></a></li>
-                        <li><a href="pages/services.html#web"><span>Web Platforms</span></a></li>
-                        <li><a href="pages/services.html#custom"><span>Custom Solutions</span></a></li>
-                    </ul>
-                </li>
-
-                <li class="has-dropdown">
-                    <button class="nav-dropdown-toggle">
-                        <span>Products</span>
-                        <span class="dropdown-arrow">▾</span>
-                    </button>
-
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/products.html"><span>All Products</span></a></li>
-                        <li><a href="pages/work-disk.html"><span>Work_Disk</span></a></li>
-                        <li><a href="pages/trading-bot.html"><span>Trading Bot</span></a></li>
-                        <li><a href="pages/future-products.html"><span>Future Products</span></a></li>
-                    </ul>
-                </li>
-
-                <li><a href="pages/contact.html"> <span>Contact</span> </a></li>
-                    <li><a href="pages/about.html"> <span>About</span> </a></li>
-
-            </ul>
-
-            <button class="menu-toggle"
-                    aria-label="Open navigation menu"
-                    aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="mobile-menu">
-
-                <ul>
-
-                    <li><a href="index.html"> <span>Home</span> </a></li>
-
-
-                                        <li><a href="pages/foundation.html"><span>Foundation</span></a></li>
-
-                    <li class="mobile-dropdown">
-
-                        <button class="mobile-dropdown-toggle">
-                            <span>Services</span>
-                            <span class="dropdown-arrow">▾</span>
-                        </button>
-
-                        <ul class="mobile-dropdown-menu">
-                            <li><a href="pages/services.html"><span>All Services</span></a></li>
-                            <li><a href="pages/services.html#software"><span>Software Engineering</span></a></li>
-                            <li><a href="pages/services.html#ai"><span>AI &amp; Automation</span></a></li>
-                            <li><a href="pages/services.html#web"><span>Web Platforms</span></a></li>
-                            <li><a href="pages/services.html#custom"><span>Custom Solutions</span></a></li>
-                        </ul>
-
-                    </li>
-
-                    <li class="mobile-dropdown">
-
-                        <button class="mobile-dropdown-toggle">
-                            <span>Products</span>
-                            <span class="dropdown-arrow">▾</span>
-                        </button>
-
-                        <ul class="mobile-dropdown-menu">
-                            <li><a href="pages/products.html"><span>All Products</span></a></li>
-                            <li><a href="pages/work-disk.html"><span>Work_Disk</span></a></li>
-                            <li><a href="pages/trading-bot.html"><span>Trading Bot</span></a></li>
-                            <li><a href="pages/future-products.html"><span>Future Products</span></a></li>
-                        </ul>
-
-                    </li>
-
-                    <li><a href="pages/contact.html"> <span>Contact</span> </a></li>
-                    <li><a href="pages/about.html"> <span>About</span> </a></li>
-
-                </ul>
-
-            </div>
-</div>
-        </nav>
-    </div>
-
-    <div class="menu-overlay"></div>
-
+    <div id="global-navigation"></div>
 </header>
 
 
@@ -150,19 +42,18 @@
         <div class="hero-content">
 
             <span class="section-tag">
-                TECHNOLOGY FOUNDATION
+                <span>TECHNOLOGY FOUNDATION</span>
             </span>
 
             <h1>
-                Building The Technology Foundations Of The Future
+                <span>Building The Technology Foundations Of The Future</span>
             </h1>
 
             <p>
-                ERGS Dynamics engineers scalable software systems,
-                AI solutions, and digital platforms designed for future growth.
+                <span>ERGS Dynamics engineers scalable software systems, AI solutions, and digital platforms designed for future growth.</span>
             </p>
 
-            <a class="button-primary" href="pages/services.html">
+            <a class="button-primary" style="display:none;" href="/pages/services.html">
                 <span>Explore Our Capabilities</span>
             </a>
 
@@ -171,6 +62,8 @@
         </div>
 
     </section>
+    <div id="live-clock-container"></div>
+
 
 
 
@@ -180,26 +73,26 @@
     <div class="card-grid">
 
         <div class="glass-card">
-            <h3>Scalable Solutions</h3>
-            <p>Desktop, web and AI platforms built for growth.</p>
-            <a class="button-primary" href="pages/services.html">
-                Explore Solutions
+            <h3><span>Scalable Solutions</span></h3>
+            <p><span>Desktop, web and AI platforms built for growth.</span></p>
+            <a class="button-primary" href="/pages/services.html">
+                <span>Explore Solutions</span>
             </a>
         </div>
 
         <div class="glass-card">
-            <h3>Quality Engineering</h3>
-            <p>Clean architecture, maintainable code and modern standards.</p>
-            <a class="button-primary" href="pages/foundation.html">
-                Engineering Approach
+            <h3><span>Quality Engineering</span></h3>
+            <p><span>Clean architecture, maintainable code and modern standards.</span></p>
+            <a class="button-primary" href="/pages/foundation.html">
+                <span>Engineering Approach</span>
             </a>
         </div>
 
         <div class="glass-card">
-            <h3>Future Vision</h3>
-            <p>Continuous research into next-generation technology solutions.</p>
-            <a class="button-primary" href="pages/future-products.html">
-                Learn More
+            <h3><span>Future Vision</span></h3>
+            <p><span>Continuous research into next-generation technology solutions.</span></p>
+            <a class="button-primary" href="/pages/future-products.html">
+                <span>Learn More</span>
             </a>
         </div>
 
@@ -209,43 +102,42 @@
 
 <section class="container">
 
-    <h2 class="section-title">Our Services</h2>
+    <h2 class="section-title"><span>Our Services</span></h2>
 
     <p class="section-intro">
-        We design, build and maintain modern software systems that help businesses
-        innovate, automate and scale with confidence.
+        <span>We design, build and maintain modern software systems that help businesses innovate, automate and scale with confidence.</span>
     </p>
 
     <div class="card-grid">
 
         <div class="glass-card">
             <h3><span>Software Engineering</span></h3>
-            <p>Scalable desktop, mobile and enterprise software solutions.</p>
-            <a class="button-primary" href="pages/services.html">
-                Learn More
+            <p><span>Scalable desktop, mobile and enterprise software solutions.</span></p>
+            <a class="button-primary" href="/pages/services.html">
+                <span>Learn More</span>
             </a>
         </div>
 
         <div class="glass-card">
-            <h3>AI & Automation</h3>
-            <p>Intelligent automation, AI integration and workflow optimisation.</p>
-            <a class="button-primary" href="pages/services.html">
-                Learn More
+            <h3><span>AI & Automation</span></h3>
+            <p><span>Intelligent automation, AI integration and workflow optimisation.</span></p>
+            <a class="button-primary" href="/pages/services.html">
+                <span>Learn More</span>
             </a>
         </div>
 
         <div class="glass-card">
             <h3><span>Web Platforms</span></h3>
-            <p>Modern responsive websites and business platforms.</p>
-            <a class="button-primary" href="pages/services.html">
-                Learn More
+            <p><span>Modern responsive websites and business platforms.</span></p>
+            <a class="button-primary" href="/pages/services.html">
+                <span>Learn More</span>
             </a>
         </div>
 
     </div>
 
     <p style="text-align:center;margin-top:2rem;">
-        <a class="button-primary" href="pages/services.html">View All Services</a>
+        <a class="button-primary" href="/pages/services.html">View <span>All Services</span></a>
     </p>
 
 </section>
@@ -253,31 +145,30 @@
 
 <section class="container">
 
-    <h2 class="section-title">Featured Products</h2>
+    <h2 class="section-title"><span>Featured Products</span></h2>
 
     <p class="section-intro">
-        Discover the flagship platforms currently being engineered by ERGS Dynamics,
-        alongside future innovations under active research and development.
+        <span>Discover the flagship platforms currently being engineered by ERGS Dynamics, alongside future innovations under active research and development.</span>
     </p>
 
     <div class="card-grid">
 
         <div class="glass-card">
             <h3><span>Work_Disk</span></h3>
-            <p>AI-powered productivity, finance and work management platform.</p>
-            <p><a class="button-primary" href="pages/work-disk.html">Learn More</a></p>
+            <p><span>AI-powered productivity, finance and work management platform.</span></p>
+            <p><a class="button-primary" href="/pages/work-disk.html"><span>Learn More</span></a></p>
         </div>
 
         <div class="glass-card">
             <h3><span>Trading Bot</span></h3>
-            <p>Advanced algorithmic trading and market analysis platform.</p>
-            <p><a class="button-primary" href="pages/trading-bot.html">Learn More</a></p>
+            <p><span>Advanced algorithmic trading and market analysis platform.</span></p>
+            <p><a class="button-primary" href="/pages/trading-bot.html"><span>Learn More</span></a></p>
         </div>
 
         <div class="glass-card">
-            <h3><span>Future Products</span></h3>
-            <p>Upcoming ERGS Dynamics innovations currently under research and development.</p>
-            <p><a class="button-primary" href="pages/future-products.html">Explore</a></p>
+            <h3><span><span>Future Products</span></span></h3>
+            <p><span>Upcoming ERGS Dynamics innovations currently under research and development.</span></p>
+            <p><a class="button-primary" href="/pages/future-products.html"><span>Explore</span></a></p>
         </div>
 
     </div>
@@ -287,36 +178,34 @@
 
 <section class="container">
 
-    <h2 class="section-title">Engineering Excellence</h2>
+    <h2 class="section-title"><span>Engineering Excellence</span></h2>
 
     <p class="section-intro">
-        Every ERGS Dynamics solution is built on disciplined engineering principles,
-        maintainable architecture, modern technologies, and long-term scalability.
-    </p>
+        <span>Every ERGS Dynamics solution is built on disciplined engineering principles, maintainable architecture, modern technologies, and long-term scalability.</span>
 
     <div class="card-grid">
 
         <div class="glass-card">
-            <h3>Clean Architecture</h3>
-            <p>Modular, maintainable systems designed for long-term evolution.</p>
-            <a class="button-primary" href="pages/foundation.html">
-                Learn More
+            <h3><span>Clean Architecture</span></h3>
+            <p><span>Modular, maintainable systems designed for long-term evolution.</span></p>
+            <a class="button-primary" href="/pages/foundation.html">
+                <span>Learn More</span>
             </a>
         </div>
 
         <div class="glass-card">
-            <h3>AI Integration</h3>
-            <p>Practical AI solutions that automate workflows and improve decision-making.</p>
-            <a class="button-primary" href="pages/foundation.html">
-                Learn More
+            <h3><span>AI Integration</span></h3>
+            <p><span>Practical AI solutions that automate workflows and improve decision-making.</span></p>
+            <a class="button-primary" href="/pages/foundation.html">
+                <span>Learn More</span>
             </a>
         </div>
 
         <div class="glass-card">
-            <h3>Future Ready</h3>
-            <p>Technology foundations engineered to scale with future business growth.</p>
-            <a class="button-primary" href="pages/foundation.html">
-                Learn More
+            <h3><span>Future Ready</span></h3>
+            <p><span>Technology foundations engineered to scale with future business growth.</span></p>
+            <a class="button-primary" href="/pages/foundation.html">
+                <span>Learn More</span>
             </a>
         </div>
 
@@ -328,15 +217,12 @@
 
     <div class="glass-card">
 
-        <h2>Engineering Foundation</h2>
+        <h2><span>Engineering Foundation</span></h2>
+
+        <p><span>Explore the engineering principles, architecture, standards, research, governance, and development framework that guide every ERGS Dynamics product.</span></p>
 
         <p>
-            Explore the engineering principles, architecture, standards, research,
-            governance, and development framework that guide every ERGS Dynamics product.
-        </p>
-
-        <p>
-            <a class="button-primary" href="pages/foundation.html">Explore the Engineering Foundation</a>
+            <a class="button-primary" href="/pages/foundation.html"><span>Explore the Engineering Foundation</span></a>
         </p>
 
     </div>
@@ -353,42 +239,42 @@
 
         <div>
             <h3>ERGS Dynamics</h3>
-            <p>Building the technology foundations of the future through software engineering, AI and scalable digital platforms.</p>
+            <p><span>Building the technology foundations of the future through software engineering, AI and scalable digital platforms.</span></p>
         </div>
 
         <div>
-            <h3>Company</h3>
-            <p><a href="pages/about.html"> <span>About</span> </a></p>
-            <p><a href="pages/foundation.html"><span>Foundation</span></a></p>
-            <p><a href="pages/contact.html"> <span>Contact</span> </a></p>
+            <h3><span>Company</span></h3>
+            <p><a href="/pages/about.html"> <span>About</span> </a></p>
+            <p><a href="/pages/foundation.html"><span>Foundation</span></a></p>
+            <p><a href="/pages/contact.html"> <span>Contact</span> </a></p>
         </div>
 
         <div>
             <h3> <span>Services</span> </h3>
-            <p><a href="pages/services.html"><span>Software Engineering</span></a></p>
-            <p><a href="pages/services.html#ai"><span>AI &amp; Automation</span></a></p>
-            <p><a href="pages/services.html#web"><span>Web Platforms</span></a></p>
+            <p><a href="/pages/services.html"><span>Software Engineering</span></a></p>
+            <p><a href="/pages/services.html#ai"><span>AI & Automation</span></a></p>
+            <p><a href="/pages/services.html#web"><span>Web Platforms</span></a></p>
         </div>
 
         <div>
             <h3> <span>Products</span> </h3>
-            <p><a href="pages/work-disk.html"><span>Work_Disk</span></a></p>
-            <p><a href="pages/trading-bot.html"><span>Trading Bot</span></a></p>
-            <p><a href="pages/future-products.html"><span>Future Products</span></a></p>
+            <p><a href="/pages/work-disk.html"><span>Work_Disk</span></a></p>
+            <p><a href="/pages/trading-bot.html"><span>Trading Bot</span></a></p>
+            <p><a href="/pages/future-products.html"><span><span>Future Products</span></span></a></p>
         </div>
 
         <div>
-            <h3>Legal</h3>
+            <h3><span>Legal</span></h3>
             <p>
-                Privacy Policy
-                <a href="pages/privacy-policy.html">
-                    Learn More
+                <span>Privacy Policy</span>
+                <a href="/pages/privacy-policy.html">
+                    <span>Learn More</span>
                 </a>
             </p>
             <p>
-                Terms & Conditions
-                <a href="pages/terms.html">
-                    Learn More
+                <span>Terms & Conditions</span>
+                <a href="/pages/terms.html">
+                    <span>Learn More</span>
                 </a>
             </p>
         </div>
@@ -396,16 +282,27 @@
     </div>
 
     <p style="text-align:center;margin-top:2.5rem;">
-        © ERGS Dynamics · Building the Technology Foundations of the Future
+        <span>© ERGS Dynamics · Building the Technology Foundations of the Future</span>
     </p>
 
 </footer>
 
 
+<script src="js/loaders/navigation-loader.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/animations.js"></script>
     <script src="js/effects.js"></script>
-<script src="js/main.js"></script>
+<script type="module" src="js/main.js"></script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+    eruda.init();
+</script>
+
+<script src="js/components/live-clock.js"></script>
+<script src="js/loaders/live-clock-loader.js"></script>
+        <script src="js/components/weather-service.js"></script>
 </body>
+
 </html>

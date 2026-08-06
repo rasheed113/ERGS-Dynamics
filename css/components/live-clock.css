@@ -1,0 +1,110 @@
+/*
+ERGS Dynamics
+Live Dashboard Clock
+*/
+
+.live-clock-widget {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin: var(--spacing-xl) 0;
+}
+
+.digital-clock {
+    width: min(90%, 420px);
+    padding: 2rem;
+    text-align:center;
+    background:#050705;
+    border:2px solid rgba(216,255,0,0.45);
+    border-radius:18px;
+}
+
+
+/* LCD main display */
+
+.clock-time {
+    font-family: "DigitalClock", monospace;
+    font-size: 3.4rem;
+    font-weight: normal;
+    letter-spacing: 0.25rem;
+    color: #d8ff00;
+    text-shadow: none;
+    filter: brightness(1.8);
+}
+
+
+/* Location */
+
+.clock-location {
+
+    margin-top:1rem;
+
+    font-family:monospace;
+
+    font-size:0.9rem;
+
+    color:#8cff00;
+
+    letter-spacing:0.3rem;
+
+}
+
+
+/* Weather */
+
+.clock-weather {
+
+    margin-top:1rem;
+
+    color:#b6ff00;
+
+    font-size:1.1rem;
+
+}
+
+
+@media(max-width:768px){
+
+.clock-time{
+    font-size:2.8rem;
+}
+
+}
+
+/* Wrist Watch Weather Mini Panel */
+
+.weather-details {
+    display:flex;
+    justify-content:center;
+    gap:0.8rem;
+    margin-top:1rem;
+    font-family:monospace;
+}
+
+.weather-details span {
+    background:#070907;
+    border:1px solid rgba(216,255,0,0.35);
+    border-radius:8px;
+    padding:0.45rem 0.7rem;
+
+    color:#d8ff00;
+
+    font-size:0.75rem;
+    letter-spacing:0.08rem;
+
+    min-width:110px;
+}
+
+@media (max-width:768px) {
+
+    .weather-details {
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .weather-details span {
+        width:150px;
+    }
+
+}
+
