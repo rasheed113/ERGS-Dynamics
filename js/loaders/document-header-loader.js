@@ -15,7 +15,7 @@ async function loadDocumentHeader() {
 
     try {
 
-        const response = await fetch("../components/document-header.html");
+        const response = await fetch(resolveComponentPath("document-header.html"));
 
         if (!response.ok) {
             throw new Error("Unable to load document header.");

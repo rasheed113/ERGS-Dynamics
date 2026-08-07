@@ -48,12 +48,10 @@
 ./docs/ur/README.md
 ./index.html
 ./js/animations.js
-./js/back-navigation-loader.js
 ./js/back-navigation.js
 ./js/components/live-clock.js
 ./js/components/weather-service.js
 ./js/doc-navigation.js
-./js/document-header-loader.js
 ./js/document-map.js
 ./js/document-viewer.js
 ./js/effects.js

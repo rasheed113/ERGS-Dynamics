@@ -15,13 +15,8 @@ async function loadGlobalNavigation() {
 
     try {
 
-        const basePath =
-            window.location.pathname.startsWith("/ERGS-Dynamics/")
-                ? "/ERGS-Dynamics/"
-                : "/";
-
         const navigationPath =
-            basePath + "components/navigation.html";
+            resolveComponentPath("navigation.html");
 
         const response = await fetch(navigationPath);
 
