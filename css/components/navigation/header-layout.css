@@ -12,6 +12,7 @@
 #global-navigation .logo {
     flex:0 0 auto;
     white-space:nowrap;
+    margin-right:3rem;
 }
 
 #global-navigation .desktop-menu {
