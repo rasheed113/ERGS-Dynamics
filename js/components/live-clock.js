@@ -8,21 +8,34 @@ function initialiseLiveClock() {
     const timeElement = document.getElementById("live-time");
     const dayElement = document.getElementById("live-day");
     const dateElement = document.getElementById("live-date");
+    const timeZoneElement = document.getElementById("live-timezone");
 
-    if (!timeElement || !dayElement || !dateElement) {
+    if (!timeElement || !dayElement || !dateElement || !timeZoneElement) {
         return;
     }
 
+    function getDeviceTimeZone() {
+
+        try {
+            return Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC";
+        } catch (error) {
+            return "UTC";
+        }
+
+    }
+
+    const timeZone = getDeviceTimeZone();
+    timeZoneElement.textContent = timeZone.replace("/", " / ").replace(/_/g, " ").toUpperCase();
 
     function updateClock() {
 
         const now = new Date();
 
 
-        const karachiTime = new Intl.DateTimeFormat(
+        const currentTime = new Intl.DateTimeFormat(
             "en-US",
             {
-                timeZone: "Asia/Karachi",
+                timeZone,
                 hour: "numeric",
                 minute: "2-digit",
                                                     second: "2-digit",
@@ -31,10 +44,10 @@ function initialiseLiveClock() {
         ).format(now);
 
 
-        const karachiDate = new Intl.DateTimeFormat(
+        const currentDate = new Intl.DateTimeFormat(
             "en-US",
             {
-                timeZone: "Asia/Karachi",
+                timeZone,
                 weekday: "short",
                 day: "2-digit",
                 month: "short",
@@ -46,15 +59,15 @@ function initialiseLiveClock() {
         const day = new Intl.DateTimeFormat(
             "en-US",
             {
-                timeZone: "Asia/Karachi",
+                timeZone,
                 weekday: "long"
             }
         ).format(now);
 
 
-        timeElement.textContent = karachiTime;
+        timeElement.textContent = currentTime;
         dayElement.textContent = day.toUpperCase();
-        dateElement.textContent = karachiDate.toUpperCase();
+        dateElement.textContent = currentDate.toUpperCase();
 
     }
 
