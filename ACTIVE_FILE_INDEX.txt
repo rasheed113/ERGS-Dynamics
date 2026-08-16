@@ -51,6 +51,7 @@
 ./js/back-navigation.js
 ./js/components/live-clock.js
 ./js/components/weather-service.js
+./js/core/path-resolver.js
 ./js/doc-navigation.js
 ./js/document-map.js
 ./js/document-viewer.js

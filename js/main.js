@@ -27,7 +27,10 @@ async function initialiseApplication() {
     initialiseNavigation();
     initialiseAnimations();
     initialiseEffects();
-    loadLiveClock();
+
+    if (typeof loadLiveClock === "function") {
+        loadLiveClock();
+    }
 
 
 }
@@ -36,6 +39,5 @@ async function initialiseApplication() {
 /*
 Global effects moved to js/effects.js
 */
-
 
 
