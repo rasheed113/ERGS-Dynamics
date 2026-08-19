@@ -3,38 +3,17 @@ ERGS Dynamics
 Weather Service
 */
 
-
 function getWeatherIcon(code) {
-
-    if ([0].includes(code)) {
-        return "☀️";
-    }
-
-    if ([1,2,3].includes(code)) {
-        return "🌤";
-    }
-
-    if ([45,48].includes(code)) {
-        return "🌫";
-    }
-
-    if ([51,53,55,56,57].includes(code)) {
-        return "🌦";
-    }
-
-    if ([61,63,65,66,67,80,81,82].includes(code)) {
-        return "🌧";
-    }
-
-    if ([95,96,99].includes(code)) {
-        return "⛈";
-    }
-
+    if ([0].includes(code)) return "☀️";
+    if ([1, 2, 3].includes(code)) return "🌤";
+    if ([45, 48].includes(code)) return "🌫";
+    if ([51, 53, 55, 56, 57].includes(code)) return "🌦";
+    if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return "🌧";
+    if ([95, 96, 99].includes(code)) return "⛈";
     return "🌡";
 }
 
 async function loadWeather() {
-
     const weatherElement = document.getElementById("live-weather");
     const humidityElement = document.getElementById("live-humidity");
     const windElement = document.getElementById("live-wind");
@@ -44,35 +23,33 @@ async function loadWeather() {
     }
 
     try {
+        const coordinates = await window.getDeviceCoordinates;
+        const url = new URL("https://api.open-meteo.com/v1/forecast");
+        url.searchParams.set("latitude", coordinates.latitude);
+        url.searchParams.set("longitude", coordinates.longitude);
+        url.searchParams.set("current", "temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code");
 
-        const response = await fetch(
-            "https://api.open-meteo.com/v1/forecast?latitude=24.8607&longitude=67.0011&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code"
-        );
+        const response = await fetch(url.toString());
+
+        if (!response.ok) {
+            throw new Error(`Weather request failed: ${response.status}`);
+        }
 
         const data = await response.json();
-
         const current = data.current;
 
-        weatherElement.textContent =
-            `${Math.round(current.temperature_2m)}°C`;
+        weatherElement.textContent = `${Math.round(current.temperature_2m)}°C`;
 
         if (humidityElement) {
-            humidityElement.textContent =
-                `Humidity ${current.relative_humidity_2m}%`;
+            humidityElement.textContent = `Humidity ${current.relative_humidity_2m}%`;
         }
 
         if (windElement) {
-            windElement.textContent =
-                `Wind ${Math.round(current.wind_speed_10m)} km/h`;
+            windElement.textContent = `Wind ${Math.round(current.wind_speed_10m)} km/h`;
         }
-
     } catch (error) {
-
-        console.error(
-            "Weather loading failed:",
-            error
-        );
-
+        console.warn("Weather loading failed:", error);
+        weatherElement.textContent = "--°C";
     }
 }
 
