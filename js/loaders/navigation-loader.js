@@ -30,6 +30,11 @@ async function loadGlobalNavigation() {
 
         container.innerHTML = html;
 
+        const brandLogo = container.querySelector("[data-brand-logo]");
+        if (brandLogo) {
+            brandLogo.src = resolvePath(brandLogo.dataset.brandLogo);
+        }
+
         if (typeof initialiseNavigation === "function") {
             initialiseNavigation();
         }
