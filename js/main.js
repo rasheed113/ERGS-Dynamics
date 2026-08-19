@@ -1,4 +1,3 @@
-
 /*
 ERGS Dynamics Website
 Application Entry Point
@@ -7,11 +6,9 @@ Purpose:
 Initialise the website and load application modules.
 */
 
-
 let applicationInitialised = false;
 
 document.addEventListener("DOMContentLoaded", initialiseApplication);
-
 
 async function initialiseApplication() {
 
@@ -21,10 +18,8 @@ async function initialiseApplication() {
 
     applicationInitialised = true;
 
-
-
-
-    initialiseNavigation();
+    // Navigation is initialised by navigation-loader.js after the
+    // navigation component has actually been inserted into the DOM.
     initialiseAnimations();
     initialiseEffects();
 
@@ -32,12 +27,8 @@ async function initialiseApplication() {
         loadLiveClock();
     }
 
-
 }
-
 
 /*
 Global effects moved to js/effects.js
 */
-
-
