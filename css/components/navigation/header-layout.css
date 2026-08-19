@@ -27,7 +27,7 @@ header {
     margin-right: 0;
     display: flex;
     align-items: center;
-    gap: .45rem;
+    gap: .4rem;
 }
 
 #global-navigation .brand-logo {
@@ -41,7 +41,8 @@ header {
 
 #global-navigation .brand-name {
     display: inline-block;
-    min-width: 0;
+    flex: 0 1 auto;
+    min-width: max-content;
     max-width: none;
     font-size: clamp(1rem, 1.8vw, 1.35rem);
     line-height: 1;
@@ -71,7 +72,7 @@ header {
 }
 
 #global-navigation .menu-toggle {
-    flex: 0 0 42px;
+    flex: 0 0 38px;
     position: relative;
     z-index: 10002;
 }
@@ -85,32 +86,34 @@ header {
         margin-left: 0 !important;
         position: relative !important;
         z-index: 10002 !important;
-        flex: 0 0 42px;
+        flex: 0 0 38px;
+        width: 38px;
     }
     #global-navigation {
         justify-content: space-between;
-        gap: .35rem;
+        gap: .25rem;
         min-width: 0;
         max-width: 100%;
     }
     #global-navigation .logo {
         flex: 1 1 auto;
         margin-right: 0;
-        gap: .4rem;
+        gap: .3rem;
         min-width: 0;
-        max-width: none;
+        max-width: calc(100% - 40px);
         overflow: visible;
     }
     #global-navigation .brand-logo {
-        height: 40px;
-        max-width: 105px;
-        flex: 0 1 auto;
+        height: 36px;
+        max-width: 82px;
+        flex: 0 1 82px;
     }
     #global-navigation .brand-name {
-        flex: 1 1 auto;
-        min-width: 0;
+        flex: 0 1 auto;
+        min-width: max-content;
         max-width: none;
-        font-size: .9rem;
+        font-size: .78rem;
+        letter-spacing: .01em;
         overflow: visible;
         text-overflow: clip;
         white-space: nowrap;
