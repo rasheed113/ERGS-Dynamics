@@ -1,91 +1,122 @@
 #global-navigation {
-    width:100%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 header {
-    position:relative;
-    z-index:10000;
+    position: relative;
+    z-index: 10000;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 #global-navigation {
-    display:flex;
-    align-items:center;
-    width:100%;
-    gap:2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
 }
 
 #global-navigation .logo {
-    flex:0 1 auto;
-    min-width:0;
-    white-space:nowrap;
-    margin-right:3rem;
-    display:flex;
-    align-items:center;
-    gap:.7rem;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
 }
 
 #global-navigation .brand-logo {
-    display:block;
-    width:auto;
-    height:46px;
-    max-width:180px;
-    object-fit:contain;
+    display: block;
+    width: auto;
+    height: 46px;
+    max-width: min(180px, 42vw);
+    object-fit: contain;
 }
 
 #global-navigation .brand-name {
-    display:inline-block;
-    font-size:clamp(1rem, 1.8vw, 1.35rem);
-    line-height:1;
-    font-weight:900;
-    letter-spacing:.025em;
-    white-space:nowrap;
-    background:linear-gradient(135deg,#ffffff 0%,var(--color-accent) 48%,#7dd3fc 72%,var(--color-primary) 100%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    text-shadow:0 2px 0 rgba(0,0,0,.65),0 0 16px rgba(0,229,255,.18);
-    filter:drop-shadow(0 3px 3px rgba(0,0,0,.45));
+    display: inline-block;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .025em;
+    white-space: nowrap;
+    background: linear-gradient(135deg,#ffffff 0%,var(--color-accent) 48%,#7dd3fc 72%,var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 0 rgba(0,0,0,.65),0 0 16px rgba(0,229,255,.18);
+    filter: drop-shadow(0 3px 3px rgba(0,0,0,.45));
 }
 
 #global-navigation .desktop-menu {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex:1 1 auto;
-    min-width:0;
-    gap:2rem;
-    list-style:none;
-    margin:0;
-    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #global-navigation .menu-toggle {
-    flex:0 0 42px;
-    position:relative;
-    z-index:10002;
+    flex: 0 0 42px;
+    position: relative;
+    z-index: 10002;
 }
 
-@media (max-width:768px) {
-    #global-navigation .desktop-menu { display:none !important; }
+@media (max-width: 768px) {
+    #global-navigation .desktop-menu { display: none !important; }
     #global-navigation .menu-toggle {
-        display:flex !important;
-        visibility:visible !important;
-        opacity:1 !important;
-        margin-left:auto !important;
-        position:relative !important;
-        z-index:10002 !important;
-        flex:0 0 42px;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-left: 0 !important;
+        position: relative !important;
+        z-index: 10002 !important;
+        flex: 0 0 42px;
     }
-    #global-navigation { justify-content:space-between; gap:.75rem; min-width:0; }
-    #global-navigation .logo { margin-right:auto; gap:.5rem; min-width:0; max-width:calc(100% - 52px); }
-    #global-navigation .brand-logo { height:40px; max-width:150px; }
-    #global-navigation .brand-name { font-size:.9rem; overflow:visible; text-overflow:clip; }
+    #global-navigation {
+        justify-content: space-between;
+        gap: .5rem;
+        min-width: 0;
+        max-width: 100%;
+    }
+    #global-navigation .logo {
+        margin-right: auto;
+        gap: .45rem;
+        min-width: 0;
+        max-width: calc(100% - 52px);
+        overflow: hidden;
+    }
+    #global-navigation .brand-logo {
+        height: 40px;
+        max-width: 120px;
+        flex: 0 1 auto;
+    }
+    #global-navigation .brand-name {
+        min-width: 0;
+        max-width: 150px;
+        font-size: .9rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 .navigation-container {
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    min-width:0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+    box-sizing: border-box;
 }
