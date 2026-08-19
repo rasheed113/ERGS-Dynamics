@@ -19,6 +19,12 @@ function initialiseNavigation() {
         return;
     }
 
+    if (menuButton.dataset.navigationInitialised === "true") {
+        return;
+    }
+
+    menuButton.dataset.navigationInitialised = "true";
+
 
     function openMenu() {
 
