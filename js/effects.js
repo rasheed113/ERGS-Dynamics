@@ -7,6 +7,12 @@ Global Effects Module
 
 function initialiseEffects() {
 
+    if (document.body.dataset.effectsInitialised === "true") {
+        return;
+    }
+
+    document.body.dataset.effectsInitialised = "true";
+
     initialiseClickEffect();
     initialiseBackToTop();
 
@@ -45,6 +51,10 @@ Back To Top Shortcut
 
 function initialiseBackToTop() {
 
+    if (document.querySelector(".back-to-top")) {
+        return;
+    }
+
     const button = document.createElement("button");
 
     button.className = "back-to-top";
@@ -57,19 +67,19 @@ function initialiseBackToTop() {
 
     document.body.appendChild(button);
 
-    window.addEventListener("scroll", function() {
+    function updateBackToTopVisibility() {
 
         if (window.scrollY > 500) {
-
             button.classList.add("show");
-
         } else {
-
             button.classList.remove("show");
-
         }
 
-    });
+    }
+
+    window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+
+    updateBackToTopVisibility();
 
     button.addEventListener("click", function() {
 
