@@ -50,7 +50,7 @@ Back To Top Shortcut
         transform 0.3s ease,
         background 0.3s ease;
 
-    z-index:9998;
+    z-index:10001;
 }
 
 
@@ -118,91 +118,3 @@ Desktop Visibility Fix
     0 0 18px rgba(0,229,255,0.12);
 
     font-size:0.95rem;
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:
-    transform .25s ease,
-    background .25s ease,
-    box-shadow .25s ease;
-}
-
-
-.back-navigation .button-primary:hover,
-#back-button:hover {
-
-    transform:translateY(-3px);
-
-    background:rgba(0,229,255,0.12);
-
-    box-shadow:
-    0 0 25px rgba(0,229,255,0.28);
-}
-
-
-/* Back to top final shape */
-
-.back-to-top {
-
-    width:46px;
-    height:46px;
-
-    border-radius:14px;
-
-    background:
-    rgba(255,255,255,0.06);
-
-    border:
-    1px solid rgba(0,229,255,0.30);
-
-    color:
-    var(--color-accent);
-
-    box-shadow:
-    0 0 20px rgba(0,229,255,0.20);
-
-}
-
-
-.back-to-top:hover {
-
-    background:
-    rgba(0,229,255,0.15);
-
-    transform:
-    translateY(-6px);
-
-    box-shadow:
-    0 0 30px rgba(0,229,255,0.35);
-
-}
-
-
-@media(max-width:768px){
-
-.back-navigation .button-primary,
-#back-button{
-
-    width:auto;
-    min-height:40px;
-
-    padding:
-    0.55rem 1.1rem;
-
-    font-size:0.9rem;
-}
-
-
-.back-to-top{
-
-    right:18px;
-    bottom:18px;
-
-    width:44px;
-    height:44px;
-
-}
-
-}
-
