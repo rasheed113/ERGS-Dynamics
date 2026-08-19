@@ -6,8 +6,47 @@ Purpose:
 Responsive behaviour for different screen sizes.
 */
 
-
 @media (max-width: 768px) {
+    html,
+    body.homepage {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body.homepage main,
+    body.homepage main > section,
+    body.homepage #live-clock-container,
+    body.homepage footer {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    body.homepage .hero {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+    }
+
+    body.homepage .hero-content,
+    body.homepage .hero-profile {
+        width: min(100%, 100%);
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    body.homepage .hero-content {
+        overflow-wrap: anywhere;
+    }
+
+    body.homepage .hero-profile-frame {
+        max-width: 190px;
+    }
 
     .container {
         width: 92%;
@@ -32,16 +71,12 @@ Responsive behaviour for different screen sizes.
     section {
         padding: var(--spacing-lg) 0;
     }
-
 }
 
-
 @media (max-width: 480px) {
-
     .logo {
         font-size: 1.25rem;
     }
-
 }
 
 /*
@@ -50,7 +85,6 @@ Improved reading experience
 */
 
 @media (max-width: 768px) {
-
     main > section {
         max-width: 100%;
     }
@@ -94,40 +128,32 @@ Footer Legal Section Responsive Polish
 */
 
 footer .card-grid {
-
     align-items: start;
 }
 
 footer h3 {
-
     margin-bottom: 1rem;
 }
 
 footer a {
-
     display: inline-block;
 }
-
 
 /*
 Mobile Footer Layout
 */
 
 @media (max-width:768px) {
-
     footer .card-grid {
-
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
     footer {
-
         text-align: center;
     }
 
     footer a {
-
         margin-top: 0.3rem;
     }
 }
