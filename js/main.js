@@ -8,7 +8,13 @@ Initialise the website and load application modules.
 
 let applicationInitialised = false;
 
-document.addEventListener("DOMContentLoaded", initialiseApplication);
+/*
+The navigation component is asynchronous. Initialise the page-level
+behaviour only after navigation-loader.js has inserted the navigation
+DOM and dispatched navigationLoaded. This keeps navigation, effects and
+live clock startup in one deterministic lifecycle on the main page.
+*/
+document.addEventListener("navigationLoaded", initialiseApplication);
 
 async function initialiseApplication() {
 
@@ -18,13 +24,11 @@ async function initialiseApplication() {
 
     applicationInitialised = true;
 
-    // Navigation is initialised by navigation-loader.js after the
-    // navigation component has actually been inserted into the DOM.
     initialiseAnimations();
     initialiseEffects();
 
     if (typeof loadLiveClock === "function") {
-        loadLiveClock();
+        await loadLiveClock();
     }
 
 }
