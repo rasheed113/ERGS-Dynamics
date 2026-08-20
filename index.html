@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="css/components/navigation/dropdown.css">
     <link rel="stylesheet" href="css/components/live-clock.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .download-modal[hidden] { display: none; }
+        .download-modal { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; padding: 1rem; background: rgba(0,0,0,.65); }
+        .download-modal-content { width: min(420px, 100%); padding: 1.5rem; border-radius: 18px; background: var(--surface, #fff); box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+        .download-modal-content h3 { margin-top: 0; }
+        .download-option { display: block; margin-top: .75rem; text-decoration: none; }
+        .download-modal-close { display: block; margin: 1rem auto 0; border: 0; background: transparent; cursor: pointer; }
+    </style>
 </head>
 <body class="homepage">
 <header>
@@ -74,7 +82,7 @@
 </section>
 <section class="container">
     <div class="card-grid">
-        <div class="glass-card"><h3><span>WorkEarn</span></h3><p><span>Work management and earning platform for the next generation of digital workers.</span></p><p><a class="button-primary" href="https://github.com/rasheed113/apk_diary/releases/download/v1.0.0/app-release.apk"><span>Download APK</span></a></p></div>
+        <div class="glass-card"><h3><span>WorkEarn</span></h3><p><span>Work management and earning platform for the next generation of digital workers.</span></p><p><button type="button" class="button-primary" id="workearn-download-button"><span>Download APK</span></button></p></div>
     </div>
 </section>
 <section class="container">
@@ -82,6 +90,15 @@
     <p class="section-intro"><span>We combine engineering discipline, architectural thinking and emerging technologies to build systems designed for long-term value.</span></p>
 </section>
 </main>
+<div id="workearn-download-modal" class="download-modal" role="dialog" aria-modal="true" aria-labelledby="workearn-download-title" hidden>
+    <div class="download-modal-content">
+        <h3 id="workearn-download-title">Download WorkEarn</h3>
+        <p>Choose the version for your Android device.</p>
+        <a class="button-primary download-option" href="https://github.com/rasheed113/apk_diary/releases/download/v1.0.0/app-release.apk"><span>🚀 Latest Version</span></a>
+        <a class="button-primary download-option" href="https://github.com/rasheed113/apk_diary/actions/runs/32395587299/artifacts/9416729913"><span>🛡️ Old Phone — Android 6 / API 23</span></a>
+        <button type="button" class="download-modal-close" id="workearn-download-close">Close</button>
+    </div>
+</div>
 <footer id="global-footer"></footer>
 <script src="js/core/path-resolver.js"></script>
 <script src="js/loaders/navigation-loader.js"></script>
@@ -93,3 +110,18 @@
 <script src="js/components/live-clock.js"></script>
 <script src="js/components/weather-service.js"></script>
 <script src="js/main.js"></script>
+<script>
+    (() => {
+        const openButton = document.getElementById('workearn-download-button');
+        const closeButton = document.getElementById('workearn-download-close');
+        const modal = document.getElementById('workearn-download-modal');
+        if (!openButton || !closeButton || !modal) return;
+        const close = () => { modal.hidden = true; };
+        openButton.addEventListener('click', () => { modal.hidden = false; });
+        closeButton.addEventListener('click', close);
+        modal.addEventListener('click', (event) => { if (event.target === modal) close(); });
+        document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.hidden) close(); });
+    })();
+</script>
+</body>
+</html>
